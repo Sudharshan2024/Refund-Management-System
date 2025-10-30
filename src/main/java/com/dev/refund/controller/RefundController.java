@@ -1,0 +1,45 @@
+package com.dev.refund.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.dev.refund.entity.Refund;
+import com.dev.refund.service.RefundService;
+
+@RestController
+@RequestMapping("/api/refund")
+public class RefundController {
+	
+	@Autowired
+	private RefundService refundService;
+	
+	@PostMapping
+	public ResponseEntity<Refund> create(@RequestBody Refund refund) {
+		return ResponseEntity.ok(refundService.createRefund(refund));
+	}
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<Refund> get(@PathVariable Long id){
+		Refund refund = refundService.getRefundById(id)
+				.orElseThrow(() ->new RuntimeException("Refund not found with id: " + id));
+		return ResponseEntity.ok(refund);
+	}
+	
+	@PutMapping("/{id}")
+	public ResponseEntity<Refund> update(@PathVariable Long id, @RequestBody Refund refund){
+		return ResponseEntity.ok(refundService.updateRefund(id, refund));
+	}
+
+	@PatchMapping("/{id}")
+	public ResponseEntity<Refund> partialUpdate(@PathVariable Long id, @RequestBody Refund refund) {
+        return ResponseEntity.ok(refundService.partialUpdateRefund(id, refund));
+    }
+}
