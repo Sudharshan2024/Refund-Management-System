@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dev.refund.entity.Refund;
+import com.dev.refund.exception.RefundNotFoundException;
 import com.dev.refund.service.RefundService;
 
 @RestController
@@ -29,7 +30,7 @@ public class RefundController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Refund> get(@PathVariable Long id){
 		Refund refund = refundService.getRefundById(id)
-				.orElseThrow(() ->new RuntimeException("Refund not found with id: " + id));
+				.orElseThrow(() ->new RefundNotFoundException(id));
 		return ResponseEntity.ok(refund);
 	}
 	
@@ -37,7 +38,7 @@ public class RefundController {
 	public ResponseEntity<Refund> update(@PathVariable Long id, @RequestBody Refund refund){
 		return ResponseEntity.ok(refundService.updateRefund(id, refund));
 	}
-
+	
 	@PatchMapping("/{id}")
 	public ResponseEntity<Refund> partialUpdate(@PathVariable Long id, @RequestBody Refund refund) {
         return ResponseEntity.ok(refundService.partialUpdateRefund(id, refund));

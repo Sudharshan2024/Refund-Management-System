@@ -10,7 +10,7 @@ public class ErrorResponse {
     public ErrorResponse(String error, int status, LocalDateTime timestamp) {
         this.error = error;
         this.status = status;
-        this.timestamp = LocalDateTime.now();
+        this.timestamp = timestamp;
     }
 
     // getters and setters
