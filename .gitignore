@@ -53,6 +53,7 @@ local.properties
 
 # Maven Wrapper
 .mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/
 
 # Logs and temp files
 logs/
