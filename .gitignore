@@ -50,3 +50,16 @@ build/
 # Ignore environment and local secret files
 .env
 local.properties
+
+# Maven Wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# Logs and temp files
+logs/
+*.tmp
+*.bak
+*.swp
+
+# OS-specific
+.DS_Store
+Thumbs.db
