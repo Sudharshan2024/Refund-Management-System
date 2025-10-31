@@ -10,4 +10,5 @@ public interface RefundService {
     Optional<Refund> getRefundById(Long id);
     Refund updateRefund(Long id, Refund refund);
     Refund partialUpdateRefund(Long id, Refund partialRefund);
+    void deleteRefund(Long id);
 }

@@ -13,6 +13,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 @JsonPropertyOrder({ "refundId", "orderId", "userId", "createdTimestamp", "updatedTimestamp" })
 @Entity
@@ -23,7 +25,12 @@ public class Refund {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long refundId;
 	
+	@NotNull(message = "Order ID cannot be null")
+	@Positive(message = "Order ID must be positive")
     private Long orderId;
+	
+	@NotNull(message = "User ID cannot be null")
+    @Positive(message = "User ID must be positive")
     private Long userId;
     
     

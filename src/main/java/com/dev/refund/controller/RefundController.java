@@ -1,7 +1,9 @@
 package com.dev.refund.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +17,8 @@ import com.dev.refund.entity.Refund;
 import com.dev.refund.exception.RefundNotFoundException;
 import com.dev.refund.service.RefundService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/refund")
 public class RefundController {
@@ -23,7 +27,7 @@ public class RefundController {
 	private RefundService refundService;
 	
 	@PostMapping
-	public ResponseEntity<Refund> create(@RequestBody Refund refund) {
+	public ResponseEntity<Refund> create(@Valid @RequestBody Refund refund) {
 		return ResponseEntity.ok(refundService.createRefund(refund));
 	}
 	
@@ -35,7 +39,7 @@ public class RefundController {
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<Refund> update(@PathVariable Long id, @RequestBody Refund refund){
+	public ResponseEntity<Refund> update(@PathVariable Long id, @Valid @RequestBody Refund refund){
 		return ResponseEntity.ok(refundService.updateRefund(id, refund));
 	}
 	
@@ -43,4 +47,10 @@ public class RefundController {
 	public ResponseEntity<Refund> partialUpdate(@PathVariable Long id, @RequestBody Refund refund) {
         return ResponseEntity.ok(refundService.partialUpdateRefund(id, refund));
     }
+	
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Void> delete(@PathVariable Long id){
+		refundService.deleteRefund(id);
+		return ResponseEntity.noContent().build();
+	}
 }
