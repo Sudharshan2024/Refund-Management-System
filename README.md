@@ -51,3 +51,36 @@ The main entity is **Refund**, which includes:
 - userId — Reference to user
 - createdTimestamp — Automatically added at creation
 - updatedTimestamp — Automatically updated during modification
+
+### Controller
+Implements REST endpoints for:
+- POST /api/refund → Create Refund
+- GET /api/refund/{id} → Retrieve Refund by ID
+- PUT /api/refund/{id} → Update Refund
+- PATCH /api/refund/{id} → Partial Update
+- DELETE /api/refund/{id} → Delete Refund
+All endpoints return JSON responses and include exception handling for invalid or missing data.
+
+### Service Layer
+- Handles business logic for refunds.
+- Performs validation checks and timestamp management.
+- Uses RefundRepository (JPA) for data persistence.
+
+### Exception Handling
+Implemented GlobalExceptionHandler to handle:
+- RefundNotFoundException for invalid IDs.
+- MethodArgumentNotValidException for invalid input.
+- Generic RuntimeException for unexpected errors.
+This ensures consistent and clear API responses.
+
+### Testing (Postman)
+- CRUD operations function correctly.
+- Validation and error responses display properly.
+
+## Screenshots and Workflow
+### Workflow:
+![](https://github.com/Sudharshan2024/Virtual-Art-Gallery/blob/24d4a947d0f76dacd63154d3afc349a9019d3a13/WorkFlow.jpg)
+
+## Conclusion
+The Refund Management System project demonstrates backend development using Java, Spring Boot, and Oracle Database.
+It successfully handles full refund lifecycle management, implements REST APIs, and ensures reliable validation and error handling.
