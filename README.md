@@ -79,7 +79,10 @@ This ensures consistent and clear API responses.
 
 ### Screenshots and Workflow
 #### Workflow:
-Start the Spring Boot application -> Connect to Oracle Database using credentials in .env -> Use Postman to call endpoints for refund management -> View saved data in the Oracle refund table
+1. Start the Spring Boot application.
+2. Connect to Oracle Database using credentials in .env.
+3. Use Postman to call endpoints for refund management.
+4. View saved data in the Oracle refund table
 #### POST Request:
 Creating a Refund
 ![](https://github.com/Sudharshan2024/Refund-Management-System/blob/main/Images/Creating-A-refund.jpg)
