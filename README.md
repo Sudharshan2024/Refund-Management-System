@@ -77,9 +77,32 @@ This ensures consistent and clear API responses.
 - CRUD operations function correctly.
 - Validation and error responses display properly.
 
-## Screenshots and Workflow
-### Workflow:
+### Screenshots and Workflow
+#### Workflow:
 ![](https://github.com/Sudharshan2024/Virtual-Art-Gallery/blob/24d4a947d0f76dacd63154d3afc349a9019d3a13/WorkFlow.jpg)
+#### POST Request:
+Creating a Refund
+![](https://github.com/Sudharshan2024/Refund-Management-System/blob/main/Images/Creating-A-refund.jpg)
+#### GET Request:
+Retrieving Refund by ID
+![](https://github.com/Sudharshan2024/Refund-Management-System/blob/main/Images/Retrieving-A-Refund.jpg)
+#### PUT Request:
+Updating Refund Data
+![](https://github.com/Sudharshan2024/Refund-Management-System/blob/main/Images/Updating-A-Refund.jpg)
+#### PATCH request:
+Partially Updating Refund Data
+![](https://github.com/Sudharshan2024/Refund-Management-System/blob/main/Images/Partiallly-Updating-A-Refund.jpg)
+#### DELETE Request:
+Removing Refund
+![](https://github.com/Sudharshan2024/Refund-Management-System/blob/main/Images/Removing-A-Refund.jpg)
+#### Invalid GET request
+Try to Create a Invalid refund for testing purpose
+![](https://github.com/Sudharshan2024/Refund-Management-System/blob/main/Images/Creating-A-Invalid-refund-ID.jpg)
+#### Invalid DELETE Request:
+Try to Remove a Non existing refund for testing purpose
+![](https://github.com/Sudharshan2024/Refund-Management-System/blob/main/Images/Removing-A-Non-Existing-Refund-ID.jpg)
+#### Refund-DataBase in the Oracle Developer
+![](https://github.com/Sudharshan2024/Refund-Management-System/blob/main/Images/refund-Database.jpg)
 
 ## Conclusion
 The Refund Management System project demonstrates backend development using Java, Spring Boot, and Oracle Database.
