@@ -79,7 +79,7 @@ This ensures consistent and clear API responses.
 
 ### Screenshots and Workflow
 #### Workflow:
-![](https://github.com/Sudharshan2024/Virtual-Art-Gallery/blob/24d4a947d0f76dacd63154d3afc349a9019d3a13/WorkFlow.jpg)
+Start the Spring Boot application -> Connect to Oracle Database using credentials in .env -> Use Postman to call endpoints for refund management -> View saved data in the Oracle refund table
 #### POST Request:
 Creating a Refund
 ![](https://github.com/Sudharshan2024/Refund-Management-System/blob/main/Images/Creating-A-refund.jpg)
