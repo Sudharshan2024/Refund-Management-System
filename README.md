@@ -12,6 +12,10 @@ Refund Management System is a backend application built using Java and Spring Bo
 - [Screenshots and Workflow](##Screenshots-and-Workflow)
 - [Conclusion](##Conclusion)
 
-###Introduction
+##Introduction
 
-In this project, I developed a Refund Management System backend application using Spring Boot.
+- In this project, I developed a Refund Management System backend application using Spring Boot.
+
+- The system allows users (or admin interfaces) to manage refund records — creating, updating, deleting, and retrieving refund information stored in an Oracle Database.
+
+- This project demonstrates backend development, REST API creation, validation, exception handling, and database persistence using Spring Data JPA.
