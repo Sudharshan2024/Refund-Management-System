@@ -34,4 +34,20 @@ Refund Management System is a backend application built using Java and Spring Bo
 - IDE            : Spring Tool Suite 4 / Eclipse
 - Version Control: Git & GitHub
 
-## ⚙️ Features
+## Features
+- Full CRUD operations on refund records.
+- RESTful APIs using Spring Boot controllers.
+- Validation on user input (e.g., non-null, positive IDs).
+- Custom Exception Handling with detailed error responses.
+- Timestamps for record creation and updates using JPA lifecycle callbacks.
+- Logging for service operations using SLF4J.
+- Tested APIs using Postman for verification.
+
+## Implementation Details
+### Entity Design
+The main entity is **Refund**, which includes:
+- refundId — Primary Key (Auto-generated)
+- orderId — Reference to order
+- userId — Reference to user
+- createdTimestamp — Automatically added at creation
+- updatedTimestamp — Automatically updated during modification
