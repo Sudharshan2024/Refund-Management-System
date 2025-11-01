@@ -7,7 +7,7 @@ Refund Management System is a backend application built using Java and Spring Bo
 - [Objective](#Objective)
 - [Tools & Technologies](#Tools-&-Technologies)
 - [Features](#Features)
-- [Implementation Details]#Implementation-Details)
+- [Implementation Details](#Implementation-Details)
 - [Screenshots and Workflow](#Screenshots-and-Workflow)
 - [Conclusion](#Conclusion)
 
